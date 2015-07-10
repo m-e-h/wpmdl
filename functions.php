@@ -46,7 +46,7 @@ function wpmdl_setup() {
 		//
 		// 'entry_header'            => 'container mb2',
 		'entry_content'           => 'mdl-shadow--4dp',
-		// 'entry_summary'           => 'container',
+		'entry_summary'           => 'static',
 		// 'entry_footer'            => 'container',
 		//
 		// 'nav_single'              => '',
@@ -72,7 +72,7 @@ function wpmdl_setup() {
 		// 'footer_widgets'          => 'bg-darken-1',
 		//
 		// // COMMENTS
-		// 'comments_area'           => 'bg-white p3 p4@md mb2 mb3@md',
+		'comments_area'           => 'bg-white p3 p4@md mb2 mb3@md mdl-shadow--2dp',
 		//
 		// // FOOTER
 		// 'footer'                  => 'bg-2',
