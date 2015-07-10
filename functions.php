@@ -36,7 +36,7 @@ function wpmdl_setup() {
 		//
 		// // ENTRY
 		// 'post'                    => '',
-		'post_archive'            => 'mdl-card mdl-shadow--2dp',
+		'post_archive'            => 'mdl-shadow--2dp',
 		//
 		//'page_header'             => 'u-1/1 center',
 		//
