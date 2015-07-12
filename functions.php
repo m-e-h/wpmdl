@@ -25,7 +25,7 @@ function wpmdl_setup() {
 		//'row_layout_sidebar_r'    => 'grid mxn3@md page-content',
 		//
 		// // SITE HEADER
-		'header'                  => 'mdl-layout__header bg-1',
+		'header'                  => 'mdl-layout__header bg-1 flex',
 		'branding'                => 'mdl-layout__header-row',
 		'site_title'              => 'mdl-layout-title',
 		// 'site_description'        => 'h3 bold m0 muted',
