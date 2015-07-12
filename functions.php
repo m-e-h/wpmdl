@@ -25,7 +25,7 @@ function wpmdl_setup() {
 		//'row_layout_sidebar_r'    => 'grid mxn3@md page-content',
 		//
 		// // SITE HEADER
-		'header'                  => 'mdl-layout__header',
+		'header'                  => 'mdl-layout__header bg-1',
 		'branding'                => 'mdl-layout__header-row',
 		'site_title'              => 'mdl-layout-title',
 		// 'site_description'        => 'h3 bold m0 muted',
@@ -89,8 +89,7 @@ function wpmdl_setup() {
 function wpmdl_scripts() {
 	wp_enqueue_style(
         'mdl-style',
-        '//storage.googleapis.com/code.getmdl.io/1.0.0/material.blue-teal.min.css',
-		array('parent')
+        '//storage.googleapis.com/code.getmdl.io/1.0.0/material.blue-teal.min.css'
     );
 
 
