@@ -89,13 +89,13 @@ function wpmdl_setup() {
 function wpmdl_scripts() {
 	wp_enqueue_style(
         'mdl-style',
-        '//storage.googleapis.com/code.getmdl.io/1.0.0/material.blue-teal.min.css'
+        '//storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-teal.min.css'
     );
 
 
-	wp_enqueue_script(
-        'mdl-script',
-        'https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js',
-        false, null, true
-    );
+	// wp_enqueue_script(
+    //     'mdl-script',
+    //     'https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js',
+    //     false, null, true
+    // );
 }
