@@ -15,3 +15,13 @@
  .mdl-mega-footer--heading-checkbox:checked~div, .mdl-mega-footer__heading-checkbox:checked~div {
      display: none;
  }
+ 
+ @media screen and (min-width: 760px) {
+ .mdl-mega-footer--heading-checkbox:checked~div, .mdl-mega-footer__heading-checkbox:checked~div {
+     display: block;
+ }
+}
+
+ .mdl-mega-footer__drop-down-section>div:empty {
+     display: none;
+ }

@@ -24,8 +24,8 @@ function wpmdl_setup() {
 		'container_wide'          => 'mt0 container--full',
 		'row'                     => '',
 		'row_layout'              => 'mdl-grid',
-		'row_layout_sidebar_l'    => 'mdl-grid mxn2@md grid--rev flex',
-		'row_layout_sidebar_r'    => 'mdl-grid mxn2@md flex',
+		'row_layout_sidebar_l'    => 'mdl-grid grid--rev flex',
+		'row_layout_sidebar_r'    => 'mdl-grid flex',
 
 		// SITE HEADER
 		'header'                  => 'mdl-layout__header is-casting-shadow',
@@ -65,11 +65,11 @@ function wpmdl_setup() {
 		'menu_primary'            => 'mdl-navigation',
 
 		// SIDEBAR
-		//'sidebar_primary'         => 'grid__item',
+		'sidebar_primary'         => 'mdl-cell',
 		'sidebar_footer'          => 'mdl-mega-footer--middle-section',
-		//'sidebar_horizontal'      => 'pb2 pb3@md flex flex-wrap flex-justify',
-		//'sidebar_right'           => 'u-1/3@md',
-		//'sidebar_left'            => 'u-1/3@md',
+		'sidebar_horizontal'      => 'mdl-grid mdl-cell mdl-cell--12-col',
+		'sidebar_right'           => 'mdl-cell--4-col',
+		'sidebar_left'            => 'mdl-cell--4-col',
 
 		// COMMENTS
 		//'comments_area'           => 'bg-white br p2 p3@md mb2 mb3@md',
@@ -149,17 +149,17 @@ function abraham_widgets() {
 		'name'          => __( 'Primary', 'abraham' ),
 		'before_title'  => '<h2 class="mdl-card__title widget-title">',
 		'after_title'   => '</h2>',
-		'before_widget' => '<section class="mdl-card mdl-shadow--2dp">',
+		'before_widget' => '<section class="mdl-card mdl-cell mdl-shadow--2dp">',
 		'after_widget'  => '</section>',
 	));
 
 	register_sidebar(array(
 		'id'            => 'footer',
 		'name'          => __( 'Footer', 'abraham' ),
-		'before_title'  => '<h2 class="widget-title mdl-mega-footer--heading">',
-		'after_title'   => '</h2><ul class="mdl-mega-footer--link-list">',
-		'before_widget' => '<section class="mdl-mega-footer__drop-down-section"><input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>',
-		'after_widget'  => '</ul></section>',
+		'before_widget' => '<section class="mdl-mega-footer__drop-down-section"><div>',
+		'before_title'  => '</div><input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked><h2 class="widget-title mdl-mega-footer--heading">',
+		'after_title'   => '</h2><div class="mdl-mega-footer--link-list">',
+		'after_widget'  => '</div></section>',
 	));
 }
 add_action('widgets_init', 'abraham_widgets');
