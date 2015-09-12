@@ -12,7 +12,6 @@
  * Template:    abraham
  */
 
- .btn-readmore {
-     margin-bottom: -20px;
-     right: 45%;
+ .mdl-mega-footer--heading-checkbox:checked~div, .mdl-mega-footer__heading-checkbox:checked~div {
+     display: none;
  }
