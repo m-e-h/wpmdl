@@ -5,7 +5,7 @@
 
 
 add_action( 'after_setup_theme', 'wpmdl_setup' );
-add_action( 'wp_enqueue_scripts', 'wpmdl_scripts' );
+//add_action( 'wp_enqueue_scripts', 'wpmdl_scripts' );
 
 
 
@@ -21,11 +21,11 @@ function wpmdl_setup() {
 		'site_container'          => 'mdl-layout__content',
 		'container'               => '',
 		'container_header'        => 'mdl-layout__header-row',
-		'container_wide'          => 'mt0 container--full',
-		'row'                     => '',
-		'row_layout'              => 'mdl-grid',
-		'row_layout_sidebar_l'    => 'mdl-grid grid--rev flex',
-		'row_layout_sidebar_r'    => 'mdl-grid flex',
+		'container_wide'          => '',
+		'row'                     => 'u-max-width',
+		'row_layout'              => 'mdl-grid u-max-width',
+		'row_layout_sidebar_l'    => 'mdl-grid--no-spacing u-flex-rev',
+		'row_layout_sidebar_r'    => 'mdl-grid mdl-grid--no-spacing',
 
 		// SITE HEADER
 		'header'                  => 'mdl-layout__header is-casting-shadow',
@@ -34,21 +34,21 @@ function wpmdl_setup() {
 		//'site_description'        => 'h3 bold m0 muted',
 
 		// CONTENT
-		'content'                 => 'mdl-cell mdl-cell--12-col',
-		'content_with_sidebar'    => 'mdl-cell mdl-cell--8-col',
+		'content'                 => 'mdl-cell mdl-grid u-m0 u-p0 u-1/1',
+		'content_with_sidebar'    => 'mdl-cell mdl-grid u-m0 u-p0  u-1/1 u-2/3@md',
 		//'content_archive'         => 'flex flex-wrap flex-justify',
 		// ENTRY
-		'post'                    => '',
-		//'post_archive'            => 'br bg-white mb2 mb3@md pb2 pb3@md flex-auto u-1/2@md',
+		'post'                    => 'mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-card u-py4 u-px3 mdl-color-text--grey-800',
+		'post_archive'            => 'mdl-cell--6-col-desktop',
 
-		'page_header'             => 'u-1/1 center',
+		'page_header'             => 'u-1/1 u-text-center',
 
-		'entry_title'             => 'h2 lh-1 px2 px3@md color-inherit muted',
-		'page_title'    		  => 'h1 m0',
+		'entry_title'             => 'mdl-card__title-text',
+		'page_title'    		  => 'u-h1',
 		'archive_description'     => '',
 
-		'entry_header'            => 'container',
-		'entry_content'           => 'py4 px3 mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800',
+		'entry_header'            => 'mdl-card__title u-pt0 u-mxn2',
+		'entry_content'           => '',
 		'entry_content_wide'      => '',
 		//'entry_summary'           => 'container px2 px3@md',
 		//'entry_footer'            => 'container',
@@ -57,19 +57,19 @@ function wpmdl_setup() {
 		'nav_archive'             => '',
 
 		// ENTRY META
-		'entry_author'            => 'inline-block px1',
-		'entry_published'         => 'inline-block',
+		'entry_author'            => '',
+		'entry_published'         => '',
 		'entry_terms'             => '',
 
 		// NAVIGATION
 		'menu_primary'            => 'mdl-navigation',
 
 		// SIDEBAR
-		'sidebar_primary'         => 'mdl-cell',
+		'sidebar_primary'         => 'mdl-cell mdl-grid u-m0 u-p0',
 		'sidebar_footer'          => 'mdl-mega-footer--middle-section',
-		'sidebar_horizontal'      => 'mdl-grid mdl-cell mdl-cell--12-col',
-		'sidebar_right'           => 'mdl-cell--4-col',
-		'sidebar_left'            => 'mdl-cell--4-col',
+		'sidebar_horizontal'      => 'mdl-grid mdl-cell u-1/1',
+		'sidebar_right'           => 'u-1/1 u-1/3@md',
+		'sidebar_left'            => 'u-1/1 u-1/3@md',
 
 		// COMMENTS
 		//'comments_area'           => 'bg-white br p2 p3@md mb2 mb3@md',
@@ -110,21 +110,21 @@ function wpmdl_setup() {
 /**
  * Enqueue scripts and styles.
  */
-function wpmdl_scripts() {
-	wp_enqueue_style(
-        'mdl-style',
-        '//storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-teal.min.css'
-    );
-
-
-	// wp_enqueue_script(
-    //     'mdl-script',
-    //     'https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js',
-    //     false, null, true
-    // );
-
-
-}
+// function wpmdl_scripts() {
+// 	wp_enqueue_style(
+//         'mdl-style',
+//         '//storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-teal.min.css'
+//     );
+//
+//
+// 	// wp_enqueue_script(
+//     //     'mdl-script',
+//     //     'https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js',
+//     //     false, null, true
+//     // );
+//
+//
+// }
 
 
 function wpmdl_primary_color( $hex ) {
@@ -147,16 +147,16 @@ function abraham_widgets() {
     register_sidebar(array(
 		'id'            => 'primary',
 		'name'          => __( 'Primary', 'abraham' ),
-		'before_title'  => '<h2 class="mdl-card__title widget-title">',
-		'after_title'   => '</h2>',
-		'before_widget' => '<section class="mdl-card mdl-cell mdl-shadow--2dp">',
+		'before_title'  => '<div class="mdl-card__title u-mtn2 u-mxn2"><h2 class="mdl-card__title-text widget-title">',
+		'after_title'   => '</h2></div>',
+		'before_widget' => '<section class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp u-p2 u-list-reset">',
 		'after_widget'  => '</section>',
 	));
 
 	register_sidebar(array(
 		'id'            => 'footer',
 		'name'          => __( 'Footer', 'abraham' ),
-		'before_widget' => '<section class="mdl-mega-footer__drop-down-section"><div>',
+		'before_widget' => '<section class="mdl-mega-footer__drop-down-section u-p2"><div>',
 		'before_title'  => '</div><input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked><h2 class="widget-title mdl-mega-footer--heading">',
 		'after_title'   => '</h2><div class="mdl-mega-footer--link-list">',
 		'after_widget'  => '</div></section>',

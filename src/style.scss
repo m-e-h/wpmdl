@@ -1,0 +1,63 @@
+/**
+ * Theme Name:  WPMDL
+ * Theme URI:   https://github.com/m-e-h/wpmdl
+ * Description: MDL child theme.
+ * Version:     1.0.0
+ * Author:      Marty Helmick
+ * Author URI:  https://github.com/m-e-h
+ * Tags:
+ * Domain Path: /languages/
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template:    abraham
+ */
+
+// Variables and mixins
+@import "variables";
+@import "mixins";
+
+// Resets and dependencies
+@import "resets/resets";
+@import "typography/typography";
+
+// Components
+@import "palette/palette";
+@import "ripple/ripple";
+@import "animation/animation";
+@import "badge/badge";
+@import "button/button";
+@import "card/card";
+@import "checkbox/checkbox";
+@import "data-table/data-table";
+@import "footer/mega_footer";
+@import "footer/mini_footer";
+@import "icon-toggle/icon-toggle";
+@import "menu/menu";
+@import "progress/progress";
+@import "layout/layout";
+@import "radio/radio";
+@import "slider/slider";
+@import "spinner/spinner";
+@import "switch/switch";
+@import "tabs/tabs";
+@import "textfield/textfield";
+@import "tooltip/tooltip";
+@import "shadow/shadow";
+@import "grid/grid";
+
+
+
+
+.mdl-mega-footer--heading-checkbox:checked~div, .mdl-mega-footer__heading-checkbox:checked~div {
+    display: none;
+}
+
+@media screen and (min-width: 760px) {
+.mdl-mega-footer--heading-checkbox:checked~div, .mdl-mega-footer__heading-checkbox:checked~div {
+    display: block;
+}
+}
+
+.mdl-mega-footer__drop-down-section>div:empty {
+    display: none;
+}
