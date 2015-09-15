@@ -6,7 +6,7 @@
 
 add_action( 'after_setup_theme', 'wpmdl_setup' );
 //add_action( 'wp_enqueue_scripts', 'wpmdl_scripts' );
-
+add_action( 'tha_header_after', 'logged_in_side_nav' );
 
 
 
@@ -19,7 +19,7 @@ function wpmdl_setup() {
 
 		'body'                    => '',
 		'site_container'          => 'mdl-layout__content',
-		'container'               => '',
+		'container'               => 'mdl-layout',
 		'container_header'        => 'mdl-layout__header-row',
 		'container_wide'          => '',
 		'row'                     => 'u-max-width',
@@ -62,7 +62,8 @@ function wpmdl_setup() {
 		'entry_terms'             => '',
 
 		// NAVIGATION
-		'menu_primary'            => 'mdl-navigation',
+		'menu_all'                => 'mdl-navigation',
+		'menu_primary'            => '',
 
 		// SIDEBAR
 		'sidebar_primary'         => 'mdl-cell mdl-grid u-m0 u-p0',
@@ -77,7 +78,7 @@ function wpmdl_setup() {
 		// FOOTER
 		'footer'                  => 'bg-1--light white color-inherit mdl-mega-footer',
 
-		'menu_item'                 => 'mdl-navigation__link p0 color-inherit',
+		'menu_item'                 => 'mdl-navigation__link u-p0 color-inherit',
 		'menu_link'                 => 'mdl-navigation__link',
 		'current_page_item'         => 'is-active',
 		'current_page_parent'       => 'is-active',
@@ -163,3 +164,7 @@ function abraham_widgets() {
 	));
 }
 add_action('widgets_init', 'abraham_widgets');
+
+function logged_in_side_nav() {
+	hybrid_get_menu('logged-in');
+}
