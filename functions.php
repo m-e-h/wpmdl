@@ -18,9 +18,10 @@ function wpmdl_setup() {
 
 
 		'body'                    => '',
-		'site_container'          => 'mdl-layout__content',
-		'container'               => 'mdl-layout',
-		'container_header'        => 'mdl-layout__header-row',
+		'site_container'          => 'mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color--grey-100',
+		'content_container'       => 'mdl-layout__content',
+		'container'               => '',
+		'container_header'        => '',
 		'container_wide'          => '',
 		'row'                     => 'u-max-width',
 		'row_layout'              => 'mdl-grid u-max-width',
@@ -28,9 +29,9 @@ function wpmdl_setup() {
 		'row_layout_sidebar_r'    => 'mdl-grid mdl-grid--no-spacing',
 
 		// SITE HEADER
-		'header'                  => 'mdl-layout__header is-casting-shadow',
-		'branding'                => '',
-		'site_title'              => 'mdl-layout-title color-inherit',
+		'header'                  => 'u-flex-justify-end mdl-layout__header mdl-layout__header--waterfall',
+		'branding'                => 'mdl-layout__header-row',
+		'site_title'              => 'u-m0 mdl-layout-title color-inherit',
 		//'site_description'        => 'h3 bold m0 muted',
 
 		// CONTENT
@@ -63,7 +64,7 @@ function wpmdl_setup() {
 
 		// NAVIGATION
 		'menu_all'                => 'mdl-navigation',
-		'menu_primary'            => '',
+		'menu_primary'            => 'u-ml-auto',
 
 		// SIDEBAR
 		'sidebar_primary'         => 'mdl-cell mdl-grid u-m0 u-p0',
@@ -158,7 +159,7 @@ function abraham_widgets() {
 		'id'            => 'footer',
 		'name'          => __( 'Footer', 'abraham' ),
 		'before_widget' => '<section class="mdl-mega-footer__drop-down-section u-p2"><div>',
-		'before_title'  => '</div><input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked><h2 class="widget-title mdl-mega-footer--heading">',
+		'before_title'  => '</div><input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked><h2 class="widget-title u-mt0 mdl-mega-footer--heading">',
 		'after_title'   => '</h2><div class="mdl-mega-footer--link-list">',
 		'after_widget'  => '</div></section>',
 	));

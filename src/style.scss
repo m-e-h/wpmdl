@@ -61,3 +61,38 @@
 .mdl-mega-footer__drop-down-section>div:empty {
     display: none;
 }
+
+
+.mdl-layout.is-small-screen .scrollindicator {
+    display: block;
+}
+
+.mdl-layout .scrollindicator {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    line-height: 57px;
+    height: 57px;
+    width: 48px;
+    display: none;
+    margin-right: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+#header .mdl-layout__header-row,
+.embed-responsive {
+    position: relative;
+}
+
+.mdl-layout .scrollindicator.disabled {
+    opacity: 0.12;
+}
+
+.mdl-layout .scrollindicator.scrollindicator--right {
+    right: 0;
+}
+
+.mdl-layout .scrollindicator.scrollindicator--left {
+    left: 0;
+}

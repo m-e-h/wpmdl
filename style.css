@@ -13714,3 +13714,47 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 {
     display: none;
 }
+
+.mdl-layout.is-small-screen .scrollindicator
+{
+    display: block;
+}
+
+.mdl-layout .scrollindicator
+{
+    line-height: 57px;
+
+    position: absolute;
+    top: auto;
+    bottom: 0;
+
+    display: none;
+
+    width: 48px;
+    height: 57px;
+    margin-right: 0;
+
+    cursor: pointer; 
+    text-align: center;
+}
+
+#header .mdl-layout__header-row,
+.embed-responsive
+{
+    position: relative;
+}
+
+.mdl-layout .scrollindicator.disabled
+{
+    opacity: .12;
+}
+
+.mdl-layout .scrollindicator.scrollindicator--right
+{
+    right: 0;
+}
+
+.mdl-layout .scrollindicator.scrollindicator--left
+{
+    left: 0;
+}
