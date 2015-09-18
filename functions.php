@@ -24,9 +24,9 @@ function wpmdl_setup() {
 		'container_header'        => '',
 		'container_wide'          => '',
 		'row'                     => 'u-max-width',
-		'row_layout'              => 'mdl-grid u-max-width',
-		'row_layout_sidebar_l'    => 'mdl-grid--no-spacing u-flex-rev',
-		'row_layout_sidebar_r'    => 'mdl-grid mdl-grid--no-spacing',
+		'row_layout'              => 'u-p0 mdl-grid u-max-width',
+		'row_layout_sidebar_l'    => 'u-flex-rev',
+		'row_layout_sidebar_r'    => '',
 
 		// SITE HEADER
 		'header'                  => 'u-flex-justify-end mdl-layout__header mdl-layout__header--waterfall',
