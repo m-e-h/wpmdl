@@ -23,7 +23,7 @@ function wpmdl_setup() {
 		'container'               => '',
 		'container_header'        => '',
 		'container_wide'          => '',
-		'row'                     => 'u-max-width',
+		'row'                     => 'u-max-width u-p0 mdl-grid u-max-width',
 		'row_layout'              => 'u-p0 mdl-grid u-max-width',
 		'row_layout_sidebar_l'    => 'u-flex-rev',
 		'row_layout_sidebar_r'    => '',
@@ -45,7 +45,7 @@ function wpmdl_setup() {
 		'page_header'             => 'u-1/1 u-text-center',
 
 		'entry_title'             => 'mdl-card__title-text',
-		'page_title'    		  => 'u-h1',
+		'page_title'    		  => 'u-h1 u-m0 u-py3',
 		'archive_description'     => '',
 
 		'entry_header'            => 'mdl-card__title u-pt0 u-mxn2',
