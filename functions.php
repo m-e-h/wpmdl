@@ -5,8 +5,8 @@
 
 
 add_action( 'after_setup_theme', 'wpmdl_setup' );
-//add_action( 'wp_enqueue_scripts', 'wpmdl_scripts' );
-add_action( 'tha_header_after', 'logged_in_side_nav' );
+add_action( 'wp_enqueue_scripts', 'wpmdl_scripts' );
+add_action( 'tha_header_after', 'logged_in_drawer' );
 
 
 
@@ -29,9 +29,9 @@ function wpmdl_setup() {
 		'row_layout_sidebar_r'    => '',
 
 		// SITE HEADER
-		'header'                  => 'u-flex-justify-end mdl-layout__header mdl-layout__header--waterfall',
+		'header'                  => 'u-flex-justify-end u-static mdl-layout__header mdl-layout__header--waterfall',
 		'branding'                => 'mdl-layout__header-row',
-		'site_title'              => 'u-m0 mdl-layout-title color-inherit',
+		'site_title'              => 'mdl-layout-title color-inherit u-fixed@md',
 		//'site_description'        => 'h3 bold m0 muted',
 
 		// CONTENT
@@ -112,21 +112,19 @@ function wpmdl_setup() {
 /**
  * Enqueue scripts and styles.
  */
-// function wpmdl_scripts() {
-// 	wp_enqueue_style(
-//         'mdl-style',
-//         '//storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-teal.min.css'
-//     );
-//
-//
-// 	// wp_enqueue_script(
-//     //     'mdl-script',
-//     //     'https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js',
-//     //     false, null, true
-//     // );
-//
-//
-// }
+function wpmdl_scripts() {
+	wp_enqueue_script(
+        'mdl-script',
+        '//storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js',
+        false, null, true
+    );
+
+	wp_enqueue_script(
+        'abraham_js',
+        trailingslashit(get_stylesheet_directory_uri())."assets/js/main.js",
+        false, false, true
+    );
+}
 
 
 function wpmdl_primary_color( $hex ) {
@@ -163,9 +161,19 @@ function abraham_widgets() {
 		'after_title'   => '</h2><div class="mdl-mega-footer--link-list">',
 		'after_widget'  => '</div></section>',
 	));
+
+	register_sidebar(array(
+		'id'            => 'drawer',
+		'name'          => __( 'Drawer Widgets', 'abraham' ),
+		'before_title'  => '<h3 class="mdl-card__title-text widget-title">',
+		'after_title'   => '</h3>',
+		'before_widget' => '<section class="u-p2 u-list-reset %2$s">',
+		'after_widget'  => '</section>',
+		'class'         => '',
+	));
 }
 add_action('widgets_init', 'abraham_widgets');
 
-function logged_in_side_nav() {
-	hybrid_get_menu('logged-in');
+function logged_in_drawer() {
+	hybrid_get_sidebar('drawer');
 }
