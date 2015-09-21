@@ -4,12 +4,12 @@ if (!is_user_logged_in()) {
 } ?>
 
 <div class="logged-in-drawer mdl-layout__drawer u-border0 u-bg-light-2 u-text-black u-color-inherit">
-    <header class="drawer-header u-text-right u-bg-2 u-text-white">
+    <header class="drawer-header u-text-right u-bg-2 u-p2 u-text-white">
         <div class="account-dropdown u-flex u-flex-center u-px1">
             <?php
             $current_user = wp_get_current_user();
 
-            echo '<div class="u-py3">' . $current_user->user_email . '</div>';
+            echo '<div class="u-text-center">' . $current_user->user_email . '</div>';
             ?>
         </div>
 
