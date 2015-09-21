@@ -3,7 +3,7 @@ if (!is_user_logged_in()) {
     return;
 } ?>
 
-<div class="logged-in-drawer mdl-layout__drawer u-bg-dark-1 u-text-white u-color-inherit">
+<div class="logged-in-drawer mdl-layout__drawer u-border0 u-bg-light-2 u-text-black u-color-inherit">
     <header class="drawer-header u-text-right">
         <div class="account-dropdown u-flex u-flex-center u-px1">
             <?php

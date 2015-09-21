@@ -18,7 +18,8 @@ function wpmdl_setup() {
 
 
 		'body'                    => '',
-		'site_container'          => 'mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color--grey-100',
+		'site_container'          => 'mdl-layout mdl-js-layout mdl-layout--fixed-header',
+		'site_container_loggedin' => 'mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer',
 		'content_container'       => 'mdl-layout__content',
 		'container'               => '',
 		'container_header'        => '',
@@ -39,7 +40,7 @@ function wpmdl_setup() {
 		'content_with_sidebar'    => 'mdl-cell mdl-grid u-m0 u-p0  u-1/1 u-2/3@md',
 		//'content_archive'         => 'flex flex-wrap flex-justify',
 		// ENTRY
-		'post'                    => 'mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-card u-py4 u-px3 mdl-color-text--grey-800',
+		'post'                    => 'mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-card u-py4 u-px3 u-text-gray',
 		'post_archive'            => 'mdl-cell--6-col-desktop',
 
 		'page_header'             => 'u-1/1 u-text-center',
@@ -77,10 +78,10 @@ function wpmdl_setup() {
 		//'comments_area'           => 'bg-white br p2 p3@md mb2 mb3@md',
 
 		// FOOTER
-		'footer'                  => 'bg-1--light white color-inherit mdl-mega-footer',
+		'footer'                  => 'u-bg-light-1 u-text-white u-color-inherit mdl-mega-footer',
 
-		'menu_item'                 => 'mdl-navigation__link u-p0 color-inherit',
-		'menu_link'                 => 'mdl-navigation__link',
+		'menu_item'                 => 'u-list-reset u-p0 u-color-inherit',
+		'menu_link'                 => 'u-hover-frost-2 u-opacity1 mdl-navigation__link',
 		'current_page_item'         => 'is-active',
 		'current_page_parent'       => 'is-active',
 		'current_page_ancestor'     => 'is-active',
