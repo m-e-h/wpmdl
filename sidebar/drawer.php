@@ -4,7 +4,7 @@ if (!is_user_logged_in()) {
 } ?>
 
 <div class="logged-in-drawer mdl-layout__drawer u-border0 u-bg-light-2 u-text-black u-color-inherit">
-    <header class="drawer-header u-text-right">
+    <header class="drawer-header u-text-right u-bg-2 u-text-white">
         <div class="account-dropdown u-flex u-flex-center u-px1">
             <?php
             $current_user = wp_get_current_user();
