@@ -89,7 +89,7 @@ function wpmdl_setup() {
 		'sub-menu'                  => 'dropdown animated slideInUp',
 
 		'gv_container'              => 'grid',
-		'gv_entry'                  => 'inline-block u-1/3 u-1/4@md',
+		//'gv_entry'                  => 'inline-block u-1/3 u-1/4@md',
 
 	));
 
