@@ -11007,3 +11007,20 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
 {
     display: block;
 }
+
+.account-dropdown:after
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 30px;
+
+    content: '';
+
+    background: -webkit-linear-gradient(left, rgba(61, 153, 112, 0), #3d9970);
+    background:         linear-gradient(to right, rgba(61, 153, 112, 0), #3d9970);
+}

@@ -92,20 +92,13 @@
   display: block;
 }
 
-// .menu-primary {
-// box-shadow: none!important;
-// border: 0!important;
-// width: 100%!important;
-// height: 85px!important;
-// -webkit-flex-shrink: 0;
-// -ms-flex-negative: 0;
-// flex-shrink: 0;
-// padding: 0 16px 0 24px!important;
-// overflow-x: auto!important;
-// overflow-y: hidden!important;
-// -webkit-user-select: none;
-// -moz-user-select: none;
-// -ms-user-select: none;
-// user-select: none;
-// margin-bottom: -16px!important;
-// }
+.account-dropdown:after {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 30px;
+    content: "";
+    background: linear-gradient(to right,rgba(61, 153, 112,0),rgba(61, 153, 112,1));
+}
