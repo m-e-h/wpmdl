@@ -89,8 +89,8 @@ function wpmdl_setup() {
 		'menu-item-has-children'    => 'has-dropdown js-dropdown',
 		'sub-menu'                  => 'dropdown animated slideInUp',
 
-		'gv_container'              => 'grid',
-		//'gv_entry'                  => 'inline-block u-1/3 u-1/4@md',
+		'gv_container'              => 'mdl-grid',
+		'gv_entry'                  => 'mdl-cell mdl-cell--4-col mdl-card mdl-shadow--2dp',
 
 	));
 
