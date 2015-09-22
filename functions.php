@@ -7,7 +7,8 @@
 add_action( 'after_setup_theme', 'wpmdl_setup' );
 add_action( 'wp_enqueue_scripts', 'wpmdl_scripts' );
 add_action( 'tha_header_after', 'logged_in_drawer' );
-
+add_action( 'tha_header_bottom', 'mdl_search_form' );
+add_action( 'tha_header_before', 'header_right_widget' );
 
 
 
@@ -155,6 +156,15 @@ function abraham_widgets() {
 	));
 
 	register_sidebar(array(
+		'id'            => 'header-right',
+		'name'          => __( 'Header Right', 'abraham' ),
+		'before_title'  => '<h3 class="h2 widget-title mt0">',
+		'after_title'   => '</h3>',
+		'before_widget' => '<section ' .hybrid_get_attr('widgets', 'header-right').'>',
+		'after_widget'  => '</section>',
+	));
+
+	register_sidebar(array(
 		'id'            => 'footer',
 		'name'          => __( 'Footer', 'abraham' ),
 		'before_widget' => '<section class="mdl-mega-footer__drop-down-section u-p2"><div>',
@@ -177,4 +187,27 @@ add_action('widgets_init', 'abraham_widgets');
 
 function logged_in_drawer() {
 	hybrid_get_sidebar('drawer');
+}
+
+function mdl_search_form() {
+?>
+<form class="u-ml-auto" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<!--label for="s" class="assistive-text"><?php _e( 'Search', 'my-theme' ); ?></label-->
+	<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+  mdl-textfield--floating-label mdl-textfield--align-right">
+		<label class="mdl-button mdl-js-button mdl-button--icon u-m0" for="header-s">
+			<i class="material-icons">search</i>
+		</label>
+		<div class="mdl-textfield__expandable-holder">
+			<input type="text" name="header-s" id="header-s" class="u-lh-2 search-field u-p0 u-border0 u-text-white u-bg-frost-1 mdl-textfield__input" />
+			<label class="u-m0 u-text-white u-opacity mdl-textfield__label" for="header-s"><?php _e( 'Search', 'my-theme' ); ?></label>
+		</div><!-- /.mdl-textfield__expandable-holder -->
+	</div><!-- /.mdl-textfield -->
+</form>
+<?php
+}
+
+
+function header_right_widget() {
+	return hybrid_get_sidebar('header-right');
 }
