@@ -18,68 +18,66 @@ function wpmdl_setup() {
 	attr_trumps( array(
 
 
-		'body'                    => '',
-		'site_container'          => 'mdl-layout mdl-js-layout mdl-layout--fixed-header',
-		'site_container_loggedin' => 'mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer',
-		'content_container'       => 'mdl-layout__content',
-		'container'               => '',
-		'container_header'        => '',
-		'container_wide'          => '',
-		'row'                     => 'u-max-width u-p0 mdl-grid u-max-width',
-		'row_layout'              => 'u-p0 mdl-grid u-max-width',
-		'row_layout_sidebar_l'    => 'u-flex-rev',
-		'row_layout_sidebar_r'    => '',
+		'body'                    	=> '',
+		'site_container'          	=> 'mdl-layout mdl-js-layout mdl-layout--fixed-header',
+		'site_container_loggedin' 	=> 'mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer',
+		'layout_container'       	=> 'mdl-layout__content',
+		'layout_container_wide'   	=> 'mdl-layout__content',
+		'layout'              		=> 'u-p0 mdl-grid u-max-width',
+		'layout_wide'              	=> 'u-p0 mdl-grid',
+		'layout_sidebar_l'    		=> 'u-p0 mdl-grid u-max-width u-flex-rev',
+		'layout_sidebar_r'    		=> 'u-p0 mdl-grid u-max-width',
 
 		// SITE HEADER
-		'header'                  => 'u-flex-justify-end u-static mdl-layout__header mdl-layout__header--waterfall',
-		'branding'                => 'mdl-layout__header-row',
-		'site_title'              => 'mdl-layout-title color-inherit u-fixed@md',
+		'header'                  	=> 'u-flex-justify-end u-static mdl-layout__header mdl-layout__header--waterfall',
+		'branding'                	=> 'mdl-layout__header-row',
+		'site_title'              	=> 'mdl-layout-title color-inherit u-fixed@md',
 		//'site_description'        => 'h3 bold m0 muted',
 
 		// CONTENT
-		'content'                 => 'mdl-cell mdl-grid u-m0 u-p0 u-1/1',
-		'content_with_sidebar'    => 'mdl-cell mdl-grid u-m0 u-p0  u-1/1 u-2/3@md',
+		'content'                 	=> 'mdl-cell mdl-grid u-m0 u-p0 u-1/1',
+		'content_with_sidebar'    	=> 'mdl-cell mdl-grid u-m0 u-p0 u-1/1 u-2/3@md',
 		//'content_archive'         => 'flex flex-wrap flex-justify',
 		// ENTRY
-		'post'                    => 'mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-card u-py4 u-px3 u-text-gray',
-		'post_archive'            => 'mdl-cell--6-col-desktop',
+		'post'                    	=> 'mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-card u-py4 u-px3 u-text-gray',
+		'post_archive'            	=> 'mdl-cell--6-col-desktop',
 
-		'page_header'             => 'u-1/1 u-text-center',
+		'page_header'             	=> 'u-1/1 u-text-center',
 
-		'entry_title'             => 'mdl-card__title-text',
-		'page_title'    		  => 'u-h1 u-m0 u-py3',
-		'archive_description'     => '',
+		'entry_title'             	=> 'mdl-card__title-text',
+		'page_title'    		  	=> 'u-h1 u-m0 u-py3',
+		'archive_description'     	=> '',
 
-		'entry_header'            => 'mdl-card__title u-pt0 u-mxn2',
-		'entry_content'           => '',
-		'entry_content_wide'      => '',
-		//'entry_summary'           => 'container px2 px3@md',
-		//'entry_footer'            => 'container',
+		'entry_header'            	=> 'mdl-card__title u-pt0 u-mxn2',
+		'entry_content'           	=> '',
+		'entry_content_wide'      	=> '',
+		'entry_summary'           	=> 'container px2 px3@md',
+		'entry_footer'            	=> 'container',
 
-		'nav_single'              => '',
-		'nav_archive'             => '',
+		'nav_single'              	=> '',
+		'nav_archive'             	=> '',
 
 		// ENTRY META
-		'entry_author'            => '',
-		'entry_published'         => '',
-		'entry_terms'             => '',
+		'entry_author'            	=> '',
+		'entry_published'         	=> '',
+		'entry_terms'             	=> '',
 
 		// NAVIGATION
-		'menu_all'                => 'mdl-navigation',
-		'menu_primary'            => 'u-ml-auto',
+		'menu_all'                	=> 'mdl-navigation',
+		'menu_primary'            	=> 'u-ml-auto',
 
 		// SIDEBAR
-		'sidebar_primary'         => 'mdl-cell mdl-grid u-m0 u-p0',
-		'sidebar_footer'          => 'mdl-mega-footer--middle-section',
-		'sidebar_horizontal'      => 'mdl-grid mdl-cell u-1/1',
-		'sidebar_right'           => 'u-1/1 u-1/3@md',
-		'sidebar_left'            => 'u-1/1 u-1/3@md',
+		'sidebar_primary'         	=> 'mdl-cell mdl-grid u-m0 u-p0',
+		'sidebar_footer'          	=> 'mdl-mega-footer--middle-section',
+		'sidebar_horizontal'      	=> 'mdl-grid mdl-cell u-1/1',
+		'sidebar_right'           	=> 'u-1/1 u-1/3@md',
+		'sidebar_left'            	=> 'u-1/1 u-1/3@md',
 
 		// COMMENTS
-		//'comments_area'           => 'bg-white br p2 p3@md mb2 mb3@md',
+		'comments_area'           	=> '',
 
 		// FOOTER
-		'footer'                  => 'u-bg-light-1 u-text-white u-color-inherit mdl-mega-footer',
+		'footer'                  	=> 'u-bg-light-1 u-text-white u-color-inherit mdl-mega-footer',
 
 		'menu_item'                 => 'u-list-reset u-p0 u-color-inherit',
 		'menu_link'                 => 'u-hover-frost-2 u-opacity1 mdl-navigation__link',
